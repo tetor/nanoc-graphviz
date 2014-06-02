@@ -1,4 +1,8 @@
+[![Build Status](https://travis-ci.org/tetor/nanoc-graphviz.svg?branch=develop)](https://travis-ci.org/tetor/nanoc-graphviz)
+
 # Nanoc::Graphviz
+
+WIP
 
 TODO: Write a gem description
 
