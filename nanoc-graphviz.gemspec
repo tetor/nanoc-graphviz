@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Nanoc::Graphviz::VERSION
   spec.authors       = ["tetor"]
   spec.email         = ["akihatoetsu@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
+  spec.summary       = "nanoc graphviz filter plugin"
   spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
