@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/tetor/nanoc-graphviz.svg?branch=develop)](https://travis-ci.org/tetor/nanoc-graphviz)
+[![Build Status](http://img.shields.io/travis/tetor/nanoc-graphviz.svg?style=flat)](https://travis-ci.org/tetor/nanoc-graphviz)
 
 # Nanoc::Graphviz
 
