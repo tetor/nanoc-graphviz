@@ -1,9 +1,12 @@
+.ruby-version
+.rbenv-gemsets
+.gems
+
 *.gem
 *.rbc
 .bundle
 .config
 .yardoc
-Gemfile.lock
 InstalledFiles
 _yardoc
 coverage

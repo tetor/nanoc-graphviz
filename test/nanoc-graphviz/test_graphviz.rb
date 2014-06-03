@@ -1,7 +1,7 @@
 require 'minitest_helper'
 
-class TestNanoc::Graphviz < MiniTest::Unit::TestCase
-  def test_tests_is_running
+class Nanoc::Graphviz::TestTest < MiniTest::Test
+  def test_tests_are_running
     assert true
   end
 

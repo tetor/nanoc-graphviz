@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["tetor"]
   spec.email         = ["akihatoetsu@gmail.com"]
   spec.summary       = "nanoc graphviz filter plugin"
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.description   = "nanoc graphviz filter plugin"
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -21,4 +21,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "minitest"
+  spec.add_development_dependency "yard"
+  spec.add_development_dependency "redcarpet"
 end
