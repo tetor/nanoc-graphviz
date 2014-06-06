@@ -25,7 +25,7 @@ module Nanoc::Graphviz
     #
     # @return [Boolean]
     def has_graphviz?
-      system('which', 'dot')
+      system 'which dot >/dev/null 2>&1'
     end
 
   end
