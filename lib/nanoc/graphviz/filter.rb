@@ -12,11 +12,13 @@ module Nanoc::Graphviz
     # @param [String] content  Graphviz code
     # @return [String] none  empty string
     def run(content, params={})
+      fail 'Runtime environments is not ready' unless ready?
+
       ''
     end
 
-    def is_ready?
-      has_graphviz?
+    def ready?
+      graphviz_ready?
     end
 
 
@@ -24,8 +26,8 @@ module Nanoc::Graphviz
     # Whether the Graphviz installed
     #
     # @return [Boolean]
-    def has_graphviz?
-      system 'which dot >/dev/null 2>&1'
+    def graphviz_ready?
+      system('which dot >/dev/null 2>&1')
     end
 
   end
