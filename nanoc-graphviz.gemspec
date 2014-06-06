@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Nanoc::Graphviz::VERSION
   spec.authors       = ["tetor"]
   spec.email         = ["akihatoetsu@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "nanoc graphviz filter plugin"
+  spec.description   = "nanoc graphviz filter plugin"
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,5 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
-  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "minitest"
+  spec.add_development_dependency "yard"
+  spec.add_development_dependency "redcarpet"
 end
