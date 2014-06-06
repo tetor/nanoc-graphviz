@@ -2,6 +2,7 @@
 .rbenv-gemsets
 .gems
 
+Gemfile.lock
 *.gem
 *.rbc
 .bundle
