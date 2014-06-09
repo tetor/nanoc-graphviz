@@ -1,4 +1,4 @@
-require "bundler/gem_tasks"
+require 'bundler/gem_tasks'
 require 'rake/testtask'
 require 'yard'
 require 'rubocop/rake_task'
@@ -12,4 +12,4 @@ YARD::Rake::YardocTask.new
 
 RuboCop::RakeTask.new
 
-task :default => :test
+task default: :test
