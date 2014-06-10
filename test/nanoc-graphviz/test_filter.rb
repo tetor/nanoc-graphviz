@@ -23,19 +23,20 @@ module Nanoc
       # run method test
       def test_run
         if @filter.ready?
-          assert false, 'Envs is not ready but no Error raisen'
+          assert_equal '', @filter.run('some texts')
         else
-          exec_filter
+          check_run_error
         end
-        assert_equal '', @filter.run('some texts')
       end
 
       private
 
-      def exec_filter
+      def check_run_error
         @filter.run('foo')
       rescue RuntimeError
         assert true
+      else
+        assert false, 'Envs is not ready but no Error raisen'
       end
     end
   end
