@@ -1,6 +1,7 @@
-require "bundler/gem_tasks"
+require 'bundler/gem_tasks'
 require 'rake/testtask'
 require 'yard'
+require 'rubocop/rake_task'
 
 Rake::TestTask.new(:test) do |t|
   t.libs = %w(lib test)
@@ -9,4 +10,6 @@ end
 
 YARD::Rake::YardocTask.new
 
-task :default => :test
+RuboCop::RakeTask.new
+
+task default: :test
