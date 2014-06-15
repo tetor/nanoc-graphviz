@@ -4,3 +4,4 @@ require 'nanoc'
 require 'nanoc/graphviz'
 
 require 'minitest/autorun'
+require 'minitest/rg'

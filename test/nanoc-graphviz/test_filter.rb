@@ -3,13 +3,15 @@
 # Graphviz filter test
 
 require 'minitest_helper'
+require 'tmpdir'
 
 module Nanoc
   module Graphviz
     # nanoc-graphviz Filter's test
     class FilterTest < MiniTest::Test
       def setup
-        @filter = ::Nanoc::Graphviz::Filter.new
+        @filter_class = ::Nanoc::Graphviz::Filter
+        @filter = @filter_class.new
       end
 
       def test_ready
@@ -20,10 +22,20 @@ module Nanoc
         end
       end
 
+      def test_from_binary
+        assert @filter_class.from_binary?, 'from setting is not correct.'
+      end
+
+      def test_to_binary
+        assert @filter_class.to_binary?, 'to binary setting is not correct.'
+      end
+
       # run method test
       def test_run
         if @filter.ready?
-          assert_equal '', @filter.run('some texts')
+          tmp_dir, filename = generate_test_item
+          assert_equal nil, @filter.run("#{tmp_dir}/#{filename}")
+          FileUtils.remove_entry tmp_dir
         else
           check_run_error
         end
@@ -37,6 +49,17 @@ module Nanoc
         assert true
       else
         assert false, 'Envs is not ready but no Error raisen'
+      end
+
+      def generate_test_item
+        dot_lang = 'graph graphname {a -- b -- c;b -- d;}'
+        in_f_name = 'graphviz_test.dot'
+
+        tmp_dir = Dir.mktmpdir
+        open("#{tmp_dir}/in_f_name", 'w') do |f|
+          f.puts dot_lang
+        end
+        [tmp_dir, in_f_name]
       end
     end
   end
