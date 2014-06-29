@@ -7,15 +7,18 @@ module Nanoc
     class Filter < Nanoc::Filter
       # set filter name
       identifier :graphviz
+      # type :type => :binary
+      type :binary
 
       # convert Graphviz code to image
       #
       # @param [String] content  Graphviz code
       # @return [String] none  empty string
-      def run(content, params = {})
+      def run(content, _ = {})
         fail 'Runtime environments is not ready' unless ready?
-
-        ''
+        command = "dot -Tpng -o #{output_filename} < #{content}"
+        system(command)
+        nil
       end
 
       def ready?
@@ -28,7 +31,10 @@ module Nanoc
       #
       # @return [Boolean]
       def graphviz_ready?
-        system('which dot >/dev/null 2>&1')
+        unless system('which dot >/dev/null 2>&1')
+          fail 'Graphviz is not installed.'
+        end
+        true
       end
     end
   end
