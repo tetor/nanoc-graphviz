@@ -2,9 +2,7 @@
 
 # Nanoc::Graphviz
 
-WIP
-
-TODO: Write a gem description
+Nanoc Graphviz filter plugin.
 
 ## Installation
 
