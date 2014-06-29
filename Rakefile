@@ -1,7 +1,15 @@
-require "bundler/gem_tasks"
-require "rspec/core/rake_task"
+require 'bundler/gem_tasks'
+require 'rake/testtask'
+require 'yard'
+require 'rubocop/rake_task'
 
-RSpec::Core::RakeTask.new(:spec)
+Rake::TestTask.new(:test) do |t|
+  t.libs = %w(lib test)
+  t.test_files = FileList['test/nanoc-graphviz/test_*.rb']
+end
 
-task :default => :spec
+YARD::Rake::YardocTask.new
 
+RuboCop::RakeTask.new
+
+task default: :test

@@ -2,9 +2,9 @@
 
 # Nanoc::Graphviz
 
-WIP
+Nanoc Graphviz filter plugin.
 
-TODO: Write a gem description
+This filter converts dot file to PNG.
 
 ## Installation
 
@@ -22,11 +22,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This plugin adds `:graphviz` filter to nanoc.
+
+In Nanoc Rules file, please write compile and route settings as below.
+
+    compile '*' do
+      if item[:extension] == 'dot'
+        filter :graphviz
+      end
+    end
+
+    route '*' do
+      if item[:extension] == 'dot'
+        item.identifier.chop + '.png'
+      end
+    end
+
+If you forget route setting, the filter will generate PNG file but it extension will be same to source file. (perhaps '.dot')
+
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/nanoc-graphviz/fork )
+1. Fork it ( https://github.com/tetor/nanoc-graphviz/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
