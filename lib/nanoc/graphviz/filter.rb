@@ -14,6 +14,7 @@ module Nanoc
       #
       # @param [String] content  Graphviz code
       # @return [String] none  empty string
+      # @raise [RuntimeError]
       def run(content, _ = {})
         fail 'Runtime environments is not ready' unless ready?
         command = "dot -Tpng -o #{output_filename} < #{content}"
@@ -31,10 +32,10 @@ module Nanoc
       #
       # @return [Boolean]
       def graphviz_ready?
-        unless system('which dot >/dev/null 2>&1')
-          fail 'Graphviz is not installed.'
+        if system('which dot >/dev/null 2>&1')
+          true
         end
-        true
+        false
       end
     end
   end

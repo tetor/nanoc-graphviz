@@ -56,8 +56,8 @@ module Nanoc
         in_f_name = 'graphviz_test.dot'
 
         tmp_dir = Dir.mktmpdir
-        open("#{tmp_dir}/in_f_name", 'w') do |f|
-          f.puts dot_lang
+        open("#{tmp_dir}/#{in_f_name}", 'w') do |f|
+          f.puts(dot_lang)
         end
         [tmp_dir, in_f_name]
       end
