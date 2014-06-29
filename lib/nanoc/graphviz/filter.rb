@@ -13,15 +13,18 @@ module Nanoc
       # convert Graphviz code to image
       #
       # @param [String] content  Graphviz code
-      # @return [String] none  empty string
+      # @return [Integer] command process status
       # @raise [RuntimeError]
       def run(content, _ = {})
         fail 'Runtime environments is not ready' unless ready?
         command = "dot -Tpng -o #{output_filename} < #{content}"
         system(command)
-        nil
+        $?
       end
 
+      # check runtime envs
+      #
+      # @return [Boolean]
       def ready?
         graphviz_ready?
       end
@@ -33,7 +36,7 @@ module Nanoc
       # @return [Boolean]
       def graphviz_ready?
         if system('which dot >/dev/null 2>&1')
-          true
+          return true
         end
         false
       end

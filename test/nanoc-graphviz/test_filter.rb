@@ -34,7 +34,7 @@ module Nanoc
       def test_run
         if @filter.ready?
           tmp_dir, filename = generate_test_item
-          assert_equal nil, @filter.run("#{tmp_dir}/#{filename}")
+          assert_equal 0, @filter.run("#{tmp_dir}/#{filename}")
           FileUtils.remove_entry tmp_dir
         else
           check_run_error
