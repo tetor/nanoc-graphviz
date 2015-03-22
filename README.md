@@ -1,4 +1,5 @@
 [![Build Status](http://img.shields.io/travis/tetor/nanoc-graphviz.svg?style=flat)](https://travis-ci.org/tetor/nanoc-graphviz)
+[![Coverage Status](https://coveralls.io/repos/tetor/nanoc-graphviz/badge.svg)](https://coveralls.io/r/tetor/nanoc-graphviz)
 
 # Nanoc::Graphviz
 
