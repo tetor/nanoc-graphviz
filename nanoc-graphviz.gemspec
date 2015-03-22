@@ -20,12 +20,12 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency('nanoc', '>= 3.6.7', '< 4.0.0')
 
-  spec.add_development_dependency 'bundler', '~> 1.6'
+  spec.add_development_dependency 'bundler', '~> 1.6', '> 1.9'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'minitest'
   spec.add_development_dependency 'minitest-rg', '~> 5.1.0'
   spec.add_development_dependency 'rubocop'
   spec.add_development_dependency 'yard'
   spec.add_development_dependency 'redcarpet'
-  spec.add_development_dependency 'coveralls', require: false
+  spec.add_development_dependency 'coveralls'
 end
