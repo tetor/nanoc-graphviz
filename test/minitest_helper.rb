@@ -5,3 +5,6 @@ require 'nanoc/graphviz'
 
 require 'minitest/autorun'
 require 'minitest/rg'
+
+require 'coveralls'
+Coveralls.wear!
