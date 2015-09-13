@@ -1,9 +1,8 @@
 [![Build Status](http://img.shields.io/travis/tetor/nanoc-graphviz.svg?style=flat)](https://travis-ci.org/tetor/nanoc-graphviz)
 [![Coverage Status](https://coveralls.io/repos/tetor/nanoc-graphviz/badge.svg)](https://coveralls.io/r/tetor/nanoc-graphviz)
+[![Join the chat at https://gitter.im/tetor/nanoc-graphviz](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tetor/nanoc-graphviz?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # Nanoc::Graphviz
-
-[![Join the chat at https://gitter.im/tetor/nanoc-graphviz](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tetor/nanoc-graphviz?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Nanoc Graphviz filter plugin.
 
