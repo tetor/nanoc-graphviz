@@ -3,6 +3,8 @@
 
 # Nanoc::Graphviz
 
+[![Join the chat at https://gitter.im/tetor/nanoc-graphviz](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/tetor/nanoc-graphviz?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Nanoc Graphviz filter plugin.
 
 This filter converts dot file to PNG.
